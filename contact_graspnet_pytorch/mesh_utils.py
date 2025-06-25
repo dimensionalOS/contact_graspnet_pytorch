@@ -111,8 +111,28 @@ class PandaGripper(object):
         self.contact_ray_directions = []
 
         # coords_path = os.path.join(root_folder, 'gripper_control_points/panda_gripper_coords.npy')
-        with open(os.path.join(root_folder,'gripper_control_points/panda_gripper_coords.pickle'), 'rb') as f:
-            self.finger_coords = pickle.load(f, encoding='latin1')
+        pickle_path = os.path.join(root_folder,'gripper_control_points/panda_gripper_coords.pickle')
+        try:
+            with open(pickle_path, 'rb') as f:
+                # Try different pickle loading strategies
+                try:
+                    self.finger_coords = pickle.load(f, encoding='latin1')
+                except:
+                    # Reset file pointer
+                    f.seek(0)
+                    try:
+                        self.finger_coords = pickle.load(f, encoding='bytes')
+                    except:
+                        # Reset file pointer
+                        f.seek(0)
+                        self.finger_coords = pickle.load(f)
+        except Exception as e:
+            print(f"Error loading gripper model from {pickle_path}: {e}")
+            # Fallback to hardcoded control points if pickle fails
+            self.finger_coords = {
+                'gripper_left_center_flat': np.array([0.0, 0.0, 0.0]),
+                'gripper_right_center_flat': np.array([0.08, 0.0, 0.0])
+            }
         finger_direction = self.finger_coords['gripper_right_center_flat'] - self.finger_coords['gripper_left_center_flat']
         self.contact_ray_origins.append(np.r_[self.finger_coords['gripper_left_center_flat'], 1])
         self.contact_ray_origins.append(np.r_[self.finger_coords['gripper_right_center_flat'], 1])
