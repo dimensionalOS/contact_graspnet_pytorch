@@ -1,3 +1,4 @@
+
 opencv-python==4.10.0.84
 python-dotenv
 openai
@@ -97,9 +98,6 @@ trimesh>=3.22.0
 python-fcl>=0.7.0.4
 pyquaternion>=0.9.9
 matplotlib>=3.7.1
-torch==2.0.1
-torchvision==0.15.2
-torchaudio==2.0.2
 rtree
 pandas>=1.5.2
 requests>=2.29.0
