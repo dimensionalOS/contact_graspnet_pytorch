@@ -1,6 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
-from models.pointnet2_utils import PointNetSetAbstraction,PointNetFeaturePropagation
+from contact_graspnet_pytorch.Pointnet_Pointnet2_pytorch.models.pointnet2_utils import PointNetSetAbstraction,PointNetFeaturePropagation
 
 
 class get_model(nn.Module):

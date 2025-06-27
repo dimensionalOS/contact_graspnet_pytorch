@@ -17,7 +17,7 @@ sys.path.append(os.path.join(BASE_DIR, 'Pointnet_Pointnet2_pytorch'))
 # from tf_sampling import farthest_point_sample, gather_point
 # from tf_grouping import query_ball_point, group_point, knn_point
 
-from models.pointnet2_utils import PointNetSetAbstractionMsg, PointNetSetAbstraction, PointNetFeaturePropagation
+from contact_graspnet_pytorch.Pointnet_Pointnet2_pytorch.models.pointnet2_utils import PointNetSetAbstractionMsg, PointNetSetAbstraction, PointNetFeaturePropagation
 from contact_graspnet_pytorch import mesh_utils, utils
 
 class ContactGraspnet(nn.Module):
