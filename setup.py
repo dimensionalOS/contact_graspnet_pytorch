@@ -22,5 +22,10 @@ setup(
     name='contact_graspnet_pytorch',
     author='multiple',
     packages=packages,
-    package_data={},
+    package_data={
+        'contact_graspnet_pytorch': [
+            'config.yaml',
+            '*.yaml',
+        ],
+    },
 )
