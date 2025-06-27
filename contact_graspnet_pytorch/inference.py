@@ -9,7 +9,7 @@ from contact_graspnet_pytorch import config_utils
 
 from contact_graspnet_pytorch.visualization_utils_o3d import visualize_grasps, show_image
 from contact_graspnet_pytorch.checkpoints import CheckpointIO 
-from data import load_available_input_data
+from contact_graspnet_pytorch.data import load_available_input_data
 
 def inference(global_config, 
               ckpt_dir,

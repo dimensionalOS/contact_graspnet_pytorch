@@ -9,7 +9,7 @@ from contact_graspnet_pytorch.visualization_utils_o3d import visualize_grasps, s
 from contact_graspnet_pytorch.checkpoints import CheckpointIO 
 # from contact_graspnet_pytorch.visualization_utils_plotly import show_image
 
-from data import load_available_input_data
+from contact_graspnet_pytorch.data import load_available_input_data
 ckpt_dir = 'checkpoints/contact_graspnet'
 forward_passes = 1
 arg_configs = []
