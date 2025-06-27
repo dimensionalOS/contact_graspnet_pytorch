@@ -20,8 +20,8 @@ ROOT_DIR = os.path.dirname(os.path.dirname(BASE_DIR))
 sys.path.append(os.path.join(BASE_DIR))
 sys.path.append(os.path.join(CONTACT_DIR, 'Pointnet_Pointnet2_pytorch'))
 
-import config_utils
-from acronym_dataloader import AcryonymDataset
+from contact_graspnet_pytorch import config_utils
+from contact_graspnet_pytorch.acronym_dataloader import AcryonymDataset
 from contact_graspnet_pytorch.contact_graspnet import ContactGraspnet, ContactGraspnetLoss
 from contact_graspnet_pytorch import utils
 from contact_graspnet_pytorch.checkpoints import CheckpointIO 
