@@ -3,8 +3,9 @@ import sys
 import random
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(BASE_DIR))
-sys.path.append(os.path.join(BASE_DIR, 'Pointnet_Pointnet2_pytorch'))
+sys.path.append(os.path.join(PACKAGE_DIR, 'Pointnet_Pointnet2_pytorch'))
 
 from PIL import Image
 import argparse

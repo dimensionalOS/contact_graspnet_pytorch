@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(os.path.dirname(BASE_DIR))
 
 sys.path.append(os.path.join(BASE_DIR))
-sys.path.append(os.path.join(BASE_DIR, 'Pointnet_Pointnet2_pytorch'))
+sys.path.append(os.path.join(CONTACT_DIR, 'Pointnet_Pointnet2_pytorch'))
 
 import config_utils
 from acronym_dataloader import AcryonymDataset

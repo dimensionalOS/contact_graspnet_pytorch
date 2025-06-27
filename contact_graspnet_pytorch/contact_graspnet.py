@@ -4,13 +4,13 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+import time
 
 # Import pointnet library
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ROOT_DIR = os.path.dirname(os.path.dirname(BASE_DIR))
-
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(BASE_DIR))
+sys.path.append(os.path.join(PACKAGE_DIR, 'Pointnet_Pointnet2_pytorch'))
 sys.path.append(os.path.join(BASE_DIR, 'Pointnet_Pointnet2_pytorch'))
 # sys.path.append(os.path.join(BASE_DIR, 'pointnet2', 'utils'))
 
